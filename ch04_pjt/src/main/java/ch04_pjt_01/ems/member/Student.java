@@ -14,6 +14,7 @@ public class Student {
 		this.sId = sId;
 		this.sPw = sPw;
 		this.sName = sName;
+		this.sAge = sAge;
 		this.sGender = sGender;
 		this.sMajor = sMajor;
 	}
