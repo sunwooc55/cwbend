@@ -80,38 +80,38 @@
     <bean id ="studentDao" class="ch04_pjt_01.ems.member.dao.StudentDao"/>
     
     <bean id ="studentRegisterService" class="ch04_pjt_01.ems.member.service.StudentRegisterService">
-    	<!-- <contructor-arg ref = "studentDao"/> --> 
+    	<constructor-arg ref = "studentDao"/>
     </bean>
     
     <bean id ="studentModifyService" class="ch04_pjt_01.ems.member.service.StudentModifyService">
-    	<!-- <contructor-arg ref = "studentDao"/> -->
+    	<constructor-arg ref = "studentDao"/> 
     </bean>
     
     <bean id ="studentSelectService" class="ch04_pjt_01.ems.member.service.StudentSelectService">
-    	<!-- <contructor-arg ref = "studentDao"/> -->
+    	<constructor-arg ref = "studentDao"/> 
     </bean>
     
     <bean id ="studentAllSelectService" class="ch04_pjt_01.ems.member.service.StudentAllSelectService">
-    	<!-- <contructor-arg ref = "studentDao"/> -->
+    	<constructor-arg ref = "studentDao"/>
     </bean>
     
     <bean id ="studentDeleteService" class ="ch04_pjt_01.ems.member.service.StudentDeleteService">
-    	<!-- <contructor-arg ref = "studentDao"/> -->
+    	<constructor-arg ref = "studentDao"/>
     </bean>
     
     <bean id ="printStudentInformationService" class ="ch04_pjt_01.ems.member.service.PrintStudentInformationService">
-    	<!-- <contructor-arg ref = "studentAllSelectService"/> -->
+    	<constructor-arg ref = "studentAllSelectService"/>
     </bean>
     
-    <bean id ="dev_DBConnectionInfo" class ="ch04_pjt_01.ems.member.DBConnectionInfo">
-    	<!-- <contructor-arg ref = "studentDao"/> -->
+    <bean id ="dev_DBConnectionInfoDev" class ="ch04_pjt_01.ems.member.DBConnectionInfo">
+    	<!-- <constructor-arg ref = "studentDao"/> -->
     	<property name = "url" value = "000.000.000.000" />
     	<property name = "userId" value = "admin" />
     	<property name = "userPw" value = "0000" />
     </bean>
     
-    <bean id ="real_DBConnectionInfo" class ="ch04_pjt_01.ems.member">
-    	<!-- <contructor-arg ref = "studentDao"/> -->
+    <bean id ="real_DBConnectionInfo" class ="ch04_pjt_01.ems.member.DBConnectionInfo">
+    	<!-- <constructor-arg ref = "studentDao"/> -->
     	<property name = "url" value = "111.111.111.111" />
     	<property name = "userId" value = "master" />
     	<property name = "userPw" value = "1111" />
@@ -138,7 +138,7 @@
     		</list>
     	</property>
     	
-    	<property name ="administrator">
+    	<property name ="administrators">
     		<map>
     			<entry>
     				<key>
@@ -168,7 +168,7 @@
     				<key>
     					<value>real</value>
     				</key>
-    				<ref bean="real_DBConnectionInfoDev"/>
+    				<ref bean="real_DBConnectionInfo"/>
     			</entry>
     		</map>
     	</property>

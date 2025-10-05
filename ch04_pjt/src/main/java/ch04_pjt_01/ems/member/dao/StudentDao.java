@@ -1,12 +1,12 @@
 package ch04_pjt_01.ems.member.dao;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import ch04_pjt_01.ems.member.Student;
 
 public class StudentDao {
-	private Map<String, Student> studentDB = new HashMap<String, Student>();
+	private Map<String, Student> studentDB = new LinkedHashMap<String, Student>();
 	
 	public void insert(Student student) {
 		studentDB.put(student.getsNum(), student);

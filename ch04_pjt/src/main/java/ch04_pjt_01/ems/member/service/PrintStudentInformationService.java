@@ -22,13 +22,13 @@ public class PrintStudentInformationService {
 		while(iterator.hasNext()) {
 			String key = iterator.next();
 			Student student = allStudent.get(key);
-			System.out.print("sNum : " + student.getsNum() + "\t");
-			System.out.print("|sId : " + student.getsId() + "\t");
-			System.out.print("|sPw : " + student.getsPw() + "\t");
-			System.out.print("|sName : " + student.getsName() + "\t");
-			System.out.print("|sAge : " + student.getsAge() + "\t");
-			System.out.print("|sGender : " + student.getsGender() + "\t");
-			System.out.println("|sMajor : " + student.getsMajor() + "\t");
+			System.out.print("sNum:" + student.getsNum() + "\t");
+			System.out.print("|sId:" + student.getsId() + "\t");
+			System.out.print("|sPw:" + student.getsPw() + "\t");
+			System.out.print("|sName:" + student.getsName() + "\t");
+			System.out.print("|sAge:" + student.getsAge() + "\t");
+			System.out.print("|sGender:" + student.getsGender() + "\t");
+			System.out.println("|sMajor:" + student.getsMajor() + "\t");
 		}
 		
 		System.out.println("END --------------");

@@ -41,13 +41,13 @@ public class MainClass {
 		Student selectStudent = selectService.select("hbs006");
 		
 		System.out.println("STUDENT START -----------------");
-		System.out.print("sNum : " + selectStudent.getsNum() + "\t");
-		System.out.print("|sId : " + selectStudent.getsId() + "\t");
-		System.out.print("|sPw : " + selectStudent.getsPw() + "\t");
-		System.out.print("|sName : " + selectStudent.getsName() + "\t");
-		System.out.print("|sAge : " + selectStudent.getsAge() + "\t");
-		System.out.print("|sGender : " + selectStudent.getsGender() + "\t");
-		System.out.print("|sMajor : " + selectStudent.getsMajor() + "\t");
+		System.out.print("sNum:" + selectStudent.getsNum() + "\t");
+		System.out.print("|sId:" + selectStudent.getsId() + "\t");
+		System.out.print("|sPw:" + selectStudent.getsPw() + "\t");
+		System.out.print("|sName:" + selectStudent.getsName() + "\t");
+		System.out.print("|sAge:" + selectStudent.getsAge() + "\t");
+		System.out.print("|sGender:" + selectStudent.getsGender() + "\t");
+		System.out.println("|sMajor:" + selectStudent.getsMajor() + "\t");
 		System.out.println("END ------------------");
 		
 		StudentModifyService modifyService = ctx.getBean("studentModifyService", StudentModifyService.class);
@@ -63,7 +63,7 @@ public class MainClass {
 		
 		printStudentInformationService.printStudentsInfo();
 
-		EMSInformationService emsInformationService = ctx.getBean("eMsInformationService", EMSInformationService.class);
+		EMSInformationService emsInformationService = ctx.getBean("eMSInformationService", EMSInformationService.class);
 		emsInformationService.printEMSInformation();
 		
 		ctx.close();
